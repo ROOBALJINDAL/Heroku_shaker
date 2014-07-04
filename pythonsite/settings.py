@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+#import os
+#BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,12 +24,13 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+'''
 ALLOWED_HOSTS = [
     "*",
     "10.0.0.13",
     "127.0.0.1",
 ]
-
+'''
 
 # Application definition
 
@@ -61,7 +62,7 @@ WSGI_APPLICATION = 'pythonsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -72,6 +73,7 @@ DATABASES = {
         'PASSWORD':'hotttttt',
     }
 }
+'''
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
@@ -96,6 +98,7 @@ STATIC_URL = '/static/'
 
 
 import dj_database_url
+
 DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
@@ -108,7 +111,6 @@ ALLOWED_HOSTS = ['*']
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
