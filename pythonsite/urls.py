@@ -9,6 +9,7 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'mygame/highscore',UserViewSet)
 
+admin.autodiscover() 
 
 urlpatterns = [
     # Examples:
