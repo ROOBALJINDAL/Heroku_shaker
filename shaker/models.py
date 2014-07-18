@@ -6,5 +6,6 @@ class User(models.Model):
     password=models.CharField(max_length=20)
     highscore=models.BigIntegerField()
     def __str__(self):
-        string="<br>USERNAME:  " + self.username + "<br>PASSWORD: " +self.password +"<br>HIGHSCORES: " + str(self.highscore)
+        string="<br>ID: " +self.ID+ <br>USERNAME:  " + self.username + "<br>PASSWORD: " +self.password +"<br>HIGHSCORES: "
+        + str(self.highscore)
         return string
