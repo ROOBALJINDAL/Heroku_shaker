@@ -5,7 +5,7 @@ from shaker.models import User
 # Create your views here.
 def home(request):
     my=""
-    string= User.objects.all().order_by('highscore')[:10]
+    string= User.objects.all().order_by('-highscore')[:10]
     for i in string:
         my=my+str(i)+"<br><br><br>"
     return HttpResponse(my)
