@@ -5,7 +5,7 @@ class User(models.Model):
     username=models.CharField(max_length=20)
     password=models.CharField(max_length=20)
     
-    #easyscore=models.BigIntegerField(default=20)
+    easyscore=models.BigIntegerField(default=20)
     #mediumscore=models.BigIntegerField(default=20)
     #hardscore=models.BigIntegerField(default=20)
     highscore=models.BigIntegerField()
