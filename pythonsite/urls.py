@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^',include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     #home ->  ^/
+    
+    url(r'^scoreboard/', views.leaderboard),
    
     url(r'^views/',views.home),
 ]

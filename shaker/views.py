@@ -9,3 +9,9 @@ def home(request):
     for i in string:
         my=my+str(i)+"<br><br><br>"
     return HttpResponse(my)
+
+def leaderboard(request):
+    user_list=User.objects.all()
+    template= loader.get_template("shaker/dashboard.html")
+    data=RequestContext(request, {'key_to_html':user_list} )
+    return HttpResponse(template.render(data))
