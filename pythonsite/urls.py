@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers, viewsets
 from shaker.models import User
+from shaker import views
 #from shaker import views
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -16,6 +17,7 @@ urlpatterns = [
     url(r'^',include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     #home ->  ^/
-   # url(r'^/',include(views.home)),
+   
+    url(r'^views/',views.home),
 ]
 
