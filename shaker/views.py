@@ -12,7 +12,7 @@ def home(request):
     return HttpResponse(my)
 
 def leaderboard(request):
-    user_list=User.objects.all()
+    user_list=User.objects.all().order_by('-highscore')[:10]
     template= loader.get_template("shaker/dashboard.html")
     data=RequestContext(request, {'key_to_html':user_list} )
     return HttpResponse(template.render(data))
