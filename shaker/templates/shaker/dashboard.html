@@ -108,8 +108,8 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>USERNAME</th>
-                  <th>PASSWORD</th>
+                  <th>Rank</th>
+                  <th>Username</th>
                   <th>HIGHSCORE</th>
                   
                 </tr>
@@ -117,8 +117,9 @@
               <tbody>
 				{% for article in key_to_html %}
 					<tr>
+						
+						<td>{{ article.rank }}</td>
 						<td>{{ article.username }}</td>
-						<td>{{ article.password }}</td>
 						<td>{{ article.highscore }}</td>
 					</tr>
 				{% endfor %}

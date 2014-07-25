@@ -18,5 +18,11 @@ def home(request):
 def leaderboard(request):
     user_list=User.objects.all().order_by('-highscore')[:10]
     template= loader.get_template("shaker/dashboard.html")
+    i = 1
+    users = []
+    for user in user_list:
+        users.add({'rank': i, 'username': user.username, 'highscore':user.highscore})
+        i = i + 1
+    
     data=RequestContext(request, {'key_to_html':user_list} )
     return HttpResponse(template.render(data))
