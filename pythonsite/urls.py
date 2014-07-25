@@ -22,6 +22,7 @@ urlpatterns = [
     #home ->  ^/
     
     url(r'^scoreboard/', views.leaderboard),
+    url(r'^leaderboard/', views.json_leaderboard),
    
     url(r'^views/',views.home),
 ]
