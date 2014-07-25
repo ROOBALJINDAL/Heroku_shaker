@@ -21,8 +21,8 @@ def leaderboard(request):
     i = 1
     users = []
     for user in user_list:
-        users.add({'rank': i, 'username': user.username, 'highscore':user.highscore})
+        users.append({'rank': i, 'username': user.username, 'highscore':user.highscore})
         i = i + 1
     
-    data=RequestContext(request, {'key_to_html':user_list} )
+    data=RequestContext(request, {'key_to_html':users} )
     return HttpResponse(template.render(data))
